@@ -7,7 +7,7 @@ int main()
   char cadena1[1000];
     char cadenas1[100][100];
     int i, j, aux=0, aux2=0;
-    printf("escriba los numeros para la primera cadena  ");
+    printf("escriba la cadena 2xN1 3xN2  ");
     fgets(cadena1, 1000, stdin);
      for(i=0;i<=(strlen(cadena1));i++)
     {
@@ -24,32 +24,17 @@ int main()
             j++;
         }
     }
-        
-    for(i=2; i<strlen(cadena1); i++) {
-        if(cadena1[i] ==' '){
-            break;
-        }
-        else if(cadena1[i] != 'x') {
-            aux = aux +(cadena1[i])*10;
-      }
-    }
-    aux = aux;
-
-    for(i=0; i<strlen(cadenas1[3]); i++) {
-        if(cadena1[i]!= 'x' && cadena1[i] != ' '){
-            aux2 = aux2 +(cadena1[i])*10;
-          }
-    }
-    aux2 = aux2;
+    aux= atoi(cadenas1[3]);
+    aux2= atoi(cadenas1[1]);
 
     printf("%d\n", aux);
        printf("%d\n", aux2);
 if(aux > aux2 )
-{printf("el menor es %s  \n", cadenas1[3]);
+{printf("el menor es %s  \n", cadenas1[1]);
 
 }
 else{
-       printf("el menor es %s \n", cadenas1[1]);
+       printf("el menor es %s \n", cadenas1[3]);
 
 }
 return 0;
